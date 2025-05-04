@@ -12,7 +12,6 @@ function toggleDarkMode() {
       boton.textContent = 'Modo Claro';
     } else {
       boton.textContent = 'Modo Oscuro';
-    }
   }
   
 function consultarPorWhatsApp(nombreProducto, precio) {
