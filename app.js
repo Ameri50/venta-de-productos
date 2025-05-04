@@ -15,11 +15,11 @@ function toggleDarkMode() {
     }
   }
   
-  
-  function consultarPorWhatsApp(nombreProducto, precio) {
+function consultarPorWhatsApp(nombreProducto, precio) {
     const mensaje = `Hola, me interesa ${nombreProducto} al precio de ${precio}`;
-    const grupoWhatsApp = 'https://chat.whatsapp.com/CHUpfk59zy8EQcpYFdHRzY'; // Enlace del grupo
-    const url = `${grupoWhatsApp}?text=${encodeURIComponent(mensaje)}`;
+    const numeroPersonal = '+51951012633'; // Reemplaza con tu número personal
+    const url = `https://wa.me/${numeroPersonal}?text=${encodeURIComponent(mensaje)}`;
     window.open(url, '_blank');
+}
   }
   
