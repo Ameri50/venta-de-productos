@@ -1,67 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tienda de Productos</title>
-  <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tienda de Productos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <header>
-    <h1>Catálogo de Productos</h1>
-    <button id="modo-oscuro" onclick="toggleDarkMode()">Modo Oscuro</button>
+    <header></header>
+        <h1>Catálogo de Productos</h1>
+        <button id="modo-oscuro" onclick="toggleDarkMode()">Modo Oscuro</button>
+    </header>
 
-  </header>
+    <main class="productos">
+        <!-- Productos del 1 al 30 -->
+        <!-- Puedes reemplazar imágenes y textos según tus necesidades -->
 
-  <main class="productos">
-    <!-- Productos del 1 al 30 -->
-    <!-- Puedes reemplazar imágenes y textos según tus necesidades -->
-
-    <!-- INICIO -->
-    <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_944485-MLU73128535334_122023-O.webp" alt="Producto 1">
-      <h3>Producto 1</h3>
-      <p>Selecciona un precio:</p>
-      <button onclick="consultarPorWhatsApp('Producto 1', '25 soles en efectivo')">Efectivo - 25 soles</button>
-      <button onclick="consultarPorWhatsApp('Producto 1', '20 soles con Yape')">Yape - 20 soles</button>
-      <button onclick="consultarPorWhatsApp('Producto 1')">Consultar</button>
-    </div>
-    <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_987690-MLA81820900818_012025-O.webp" alt="Producto 2">
-      <h3>Producto 2</h3>
-      <p>Descripción del producto 2.</p>
-      <button onclick="consultarPorWhatsApp('Producto 2')">Consultar</button>
-    </div>
-    <div class="producto">
-      <img src="https://http2.mlstatic.com/D_NQ_NP_891578-MLA69978888366_062023-O.webp" alt="Producto 3">
-      <h3>Producto 3</h3>
-      <p>Descripción del producto 3.</p>
-      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
-    </div>
+        <!-- INICIO -->
+        <div class="producto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_944485-MLU73128535334_122023-O.webp" alt="Producto 1">
+            <h3>Producto 1</h3>
+            <p>Selecciona un precio:</p>
+            <button onclick="consultarPorWhatsApp('Producto 1', '25 soles en efectivo')">Efectivo - 25 soles</button>
+            <button onclick="consultarPorWhatsApp('Producto 1', '20 soles con Yape')">Yape - 20 soles</button>
+            <button onclick="consultarPorWhatsApp('Producto 1')">Consultar</button>
+        </div>
+        <div class="producto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_987690-MLA81820900818_012025-O.webp" alt="Producto 2">
+            <h3>Producto 2</h3>
+            <p>Selecciona un precio:</p>
+            <button onclick="consultarPorWhatsApp('Producto 2', '25 soles en efectivo')">Efectivo - 25 soles</button>
+            <button onclick="consultarPorWhatsApp('Producto 2', '20 soles con Yape')">Yape - 20 soles</button>
+            <button onclick="consultarPorWhatsApp('Producto 2')">Consultar</button>
+        </div>
+        <div class="producto">
+            <img src="https://http2.mlstatic.com/D_NQ_NP_891578-MLA69978888366_062023-O.webp" alt="Producto 3">
+            <h3>Producto 3</h3>
+            <p>Selecciona un precio:</p>
+            <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+            <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+            <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
+        </div>
     <div class="producto">
       <img src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/129828089_01/w=800,h=800,fit=pad" alt="Producto 4">
       <h3>Producto 4</h3>
-      <p>Descripción del producto 4.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 4')">Consultar</button>
     </div>
     <div class="producto">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7PXAgA_X7G4kp32KVULZ4M7jpX8wFxRXh9wdf7xmv3zj4orKhjrktWRc04kaQrWfJGAY&usqp=CAU" alt="Producto 5">
       <h3>Producto 5</h3>
-      <p>Descripción del producto 5.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 5', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 5', '20 soles con Yape')">Yape - 20 soles</button>
       <button onclick="consultarPorWhatsApp('Producto 5')">Consultar</button>
     </div>
     <div class="producto">
       <img src="https://plazavea.vteximg.com.br/arquivos/ids/27608294-418-418/image-7070e2dca158412d8f34d642" alt="Producto 6">
       <h3>Producto 6</h3>
-      <p>Descripción del producto 6.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 6')">Consultar</button>
     </div>
     <div class="producto">
       <img src="https://ae01.alicdn.com/kf/S72fffe2748a843338b821ebf8aab2f45I.jpg" alt="Producto 7">
       <h3>Producto 7</h3>
-      <p>Descripción del producto 7.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 7')">Consultar</button>
     </div>
     <div class="producto">
@@ -73,97 +87,145 @@
     <div class="producto">
       <img src="https://promart.vteximg.com.br/arquivos/ids/6461712-1000-1000/image-5ccb1783a58d4709a7dc08d506eaad30.jpg?v=637969817191130000" alt="Producto 9">
       <h3>Producto 9</h3>
-      <p>Descripción del producto 9.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 9')">Consultar</button>
     </div>
     <div class="producto">
       <img src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/122578327_01/public" alt="Producto 10">
       <h3>Producto 10</h3>
-      <p>Descripción del producto 10.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 10')">Consultar</button>
     </div>
     <div class="producto">
         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsxLgLXyftTmRiWzQX3TJSfvvkODkRjoJlYG1PzpzKGPssxvhjqjAzrL5HD-0iXZnH5f8&usqp=CAU" alt="Producto 10">
         <h3>Producto 11</h3>
-        <p>Descripción del producto 10.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 11')">Consultar</button>
       </div>
       <div class="producto">
         <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSzy2iEVE2kxH00qEYchWvwkp3GxkwSPNaUAC5QNR2jCR_gIn3b" alt="Producto 10">
         <h3>Producto 12</h3>
-        <p>Descripción del producto 10.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 12')">Consultar</button>
       </div>
       <div class="producto">
         <img src="https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4631/PMP20000278257/imagen2-1.jpeg" alt="Producto 10">
         <h3>Producto 13</h3>
-        <p>Descripción del producto 10.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 13')">Consultar</button>
       </div>
       <div class="producto">
         <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
         <h3>Producto 14</h3>
-        <p>Descripción del producto 10.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 14')">Consultar</button>
       </div>
       <div class="producto">
         <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
         <h3>Producto 15</h3>
-        <p>Descripción del producto 10.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 15')">Consultar</button>
       </div>
       <div class="producto">
         <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
         <h3>Producto 16</h3>
-        <p>Descripción del producto 10.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 16')">Consultar</button>
       </div>
       <div class="producto">
         <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
         <h3>Producto 17</h3>
-        <p>Descripción del producto 10.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 17')">Consultar</button>
       </div>
       <div class="producto">
         <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
         <h3>Producto 18</h3>
-        <p>Descripción del producto 10.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 18')">Consultar</button>
       </div>
       <div class="producto">
         <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
         <h3>Producto 19</h3>
-        <p>Descripción del producto 10.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 19')">Consultar</button>
       </div>
       <div class="producto">
         <img src="https://via.placeholder.com/300x200.png?text=Producto+21" alt="Producto 21">
         <h3>Producto 20</h3>
-        <p>Descripción del producto 21.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 20')">Consultar</button>
       </div> 
     <div class="producto">
       <img src="https://via.placeholder.com/300x200.png?text=Producto+21" alt="Producto 21">
       <h3>Producto 21</h3>
-      <p>Descripción del producto 21.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 21')">Consultar</button>
     </div>
     <div class="producto">
       <img src="https://via.placeholder.com/300x200.png?text=Producto+22" alt="Producto 22">
       <h3>Producto 22</h3>
-      <p>Descripción del producto 22.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 22')">Consultar</button>
     </div>
     <div class="producto">
       <img src="https://via.placeholder.com/300x200.png?text=Producto+23" alt="Producto 23">
       <h3>Producto 23</h3>
-      <p>Descripción del producto 23.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 23')">Consultar</button>
     </div>
     <div class="producto">
       <img src="https://via.placeholder.com/300x200.png?text=Producto+24" alt="Producto 24">
       <h3>Producto 24</h3>
-      <p>Descripción del producto 24.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 24')">Consultar</button>
     </div>
     <div class="producto">
@@ -175,31 +237,46 @@
     <div class="producto">
       <img src="https://via.placeholder.com/300x200.png?text=Producto+26" alt="Producto 26">
       <h3>Producto 26</h3>
-      <p>Descripción del producto 26.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 26')">Consultar</button>
     </div>
     <div class="producto">
       <img src="https://via.placeholder.com/300x200.png?text=Producto+27" alt="Producto 27">
       <h3>Producto 27</h3>
-      <p>Descripción del producto 27.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 27')">Consultar</button>
     </div>
     <div class="producto">
       <img src="https://via.placeholder.com/300x200.png?text=Producto+28" alt="Producto 28">
       <h3>Producto 28</h3>
-      <p>Descripción del producto 28.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 28')">Consultar</button>
     </div>
     <div class="producto">
       <img src="https://via.placeholder.com/300x200.png?text=Producto+29" alt="Producto 29">
       <h3>Producto 29</h3>
-      <p>Descripción del producto 29.</p>
+      <p>Selecciona un precio:</p>
+      <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+      <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
       <button onclick="consultarPorWhatsApp('Producto 29')">Consultar</button>
     </div>
     <div class="producto">
         <img src="https://via.placeholder.com/300x200.png?text=Producto+29" alt="Producto 29">
         <h3>Producto 30</h3>
-        <p>Descripción del producto 29.</p>
+        <p>Selecciona un precio:</p>
+        <button onclick="consultarPorWhatsApp('Producto 3', '25 soles en efectivo')">Efectivo - 25 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3', '20 soles con Yape')">Yape - 20 soles</button>
+        <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
         <button onclick="consultarPorWhatsApp('Producto 29')">Consultar</button>
       </div>
   </main>
