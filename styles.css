@@ -1,163 +1,117 @@
-/* Estilo para el botón de modo oscuro */
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #020101;
+  color: #f8f2f2;
+  padding: 1rem;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #0b0808;
+  box-shadow: 0 2px 5px rgb(255, 239, 239);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+header .logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+.menu-opciones {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+}
+
+.menu-opciones a {
+  text-decoration: none;
+  color: #f9f7f7;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.menu-opciones a:hover {
+  color: #007bff;
+}
+
 #modo-oscuro {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #1e3d58;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #modo-oscuro:hover {
-    background-color: #17415d;
-  }
-  
-  body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-  
-  header.dark-mode {
-    background-color: #333;
-  }
-  
-  button.dark-mode {
-    background-color: #e0e0e0;
-    color: #333;
-  }
-  
-  .producto.dark-mode {
-    background-color: #222;
-    color: #e0e0e0;
-  }
-  
-  .producto.dark-mode h3 {
-    color: #e0e0e0;
-  }
-  
-  .producto.dark-mode button {
-    background-color: #444;
-    color: #e0e0e0;
-  }
-  
-  .producto.dark-mode button:hover {
-    background-color: #666;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Inter', sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
-  }
-  
-  header {
-    background-color: #1e3d58;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-  }
-  
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
-  }
-  
-  main {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-    padding: 30px;
-  }
-  
-  .producto {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  .producto:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  }
-  
-  .producto img {
-    width: 100%;
-    height: auto;
-    border-bottom: 2px solid #f4f7f6;
-  }
-  
-  h3 {
-    font-size: 1.5rem;
-    margin: 15px 0;
-    color: #1e3d58;
-  }
-  
-  p {
-    font-size: 1rem;
-    color: #777;
-    margin-bottom: 15px;
-  }
-  
-  button {
-    background-color: #1e3d58;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: #17415d;
-    transform: scale(1.05);
-  }
-  
-  button:active {
-    transform: scale(0.95);
-  }
-  
-  button:focus {
-    outline: none;
-  }
-  
-  .producto p,
-  button {
-    margin-top: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    h1 {
-      font-size: 2rem;
-    }
-  
-    .producto {
-      margin: 0 auto;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 1.8rem;
-    }
-  
-    .producto {
-      width: 100%;
-    }
-  }
-  
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+#modo-oscuro:hover {
+  background-color: #0056b3;
+}
+
+/* Productos */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.producto {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(245, 242, 242, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  margin: 0.8rem 0;
+}
+
+.producto button {
+  margin: 0.25rem 0;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #040805;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.producto button:hover {
+  background-color: #218838;
+}
+.nosotros {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 3rem 5%;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  min-height: 600px; /* ← Esto lo hace más largo */
+}
+
+
