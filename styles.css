@@ -1,83 +1,163 @@
-/* styles.css */
-
-* {
-    box-sizing: border-box;
+/* Estilo para el botón de modo oscuro */
+#modo-oscuro {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #1e3d58;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #modo-oscuro:hover {
+    background-color: #17415d;
+  }
+  
+  body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+  }
+  
+  header.dark-mode {
+    background-color: #333;
+  }
+  
+  button.dark-mode {
+    background-color: #e0e0e0;
+    color: #333;
+  }
+  
+  .producto.dark-mode {
+    background-color: #222;
+    color: #e0e0e0;
+  }
+  
+  .producto.dark-mode h3 {
+    color: #e0e0e0;
+  }
+  
+  .producto.dark-mode button {
+    background-color: #444;
+    color: #e0e0e0;
+  }
+  
+  .producto.dark-mode button:hover {
+    background-color: #666;
+  }
+  
+  * {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
   }
   
   body {
-    background-color: #f9f9f9;
+    font-family: 'Inter', sans-serif;
+    background-color: #f4f7f6;
     color: #333;
-    line-height: 1.6;
   }
   
   header {
-    background-color: #1e88e5;
-    color: white;
-    padding: 1rem 2rem;
+    background-color: #1e3d58;
+    color: #fff;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
   }
   
   h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 600;
   }
   
-  .productos {
+  main {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 30px;
   }
   
   .producto {
-    background: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .producto:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
   }
   
   .producto img {
     width: 100%;
     height: auto;
-    display: block;
+    border-bottom: 2px solid #f4f7f6;
   }
   
-  .producto h3 {
-    font-size: 1.25rem;
-    margin: 1rem;
-    color: #1e88e5;
+  h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #1e3d58;
   }
   
-  .producto p {
-    font-size: 0.95rem;
-    margin: 0 1rem 1rem;
+  p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
   }
   
-  .producto button {
-    display: block;
-    margin: 0 1rem 1.5rem;
-    padding: 0.6rem 1rem;
-    background-color: #1e88e5;
-    color: white;
+  button {
+    background-color: #1e3d58;
+    color: #fff;
     border: none;
-    border-radius: 8px;
-    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
   }
   
-  .producto button:hover {
-    background-color: #1565c0;
+  button:hover {
+    background-color: #17415d;
+    transform: scale(1.05);
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  .producto p,
+  button {
+    margin-top: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .producto {
+      margin: 0 auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    .producto {
+      width: 100%;
+    }
   }
   
