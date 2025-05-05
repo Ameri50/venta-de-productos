@@ -1,223 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Tienda de Productos</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inicio - Aplicación de Ventas</title>
+  <link rel="stylesheet" href="inicio.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e8e6c5a3.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <button id="modo-oscuro" class="boton-modo-oscuro">Modo Oscuro</button>
+  <script>
+    const botonModoOscuro = document.getElementById('modo-oscuro');
+    botonModoOscuro.addEventListener('click', () => {
+      document.body.classList.toggle('oscuro');
+    });
+  </script>
+  <style>
+    .boton-modo-oscuro {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      padding: 10px 15px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      z-index: 1000;
+    }
 
-    <header class="header">
-      <div class="logo">
-      <img src="img/usar.png" alt="Logo de la tienda" class="logo-img" />
-      </div>
-      <h1 class="catalogo-titulo">Catálogo de Productos</h1>
-      <div class="right-aligned">
-      
-      </div>
-      <nav class="menu-nav">
-      <ul class="menu-opciones">
-        <li><a href="#opcion1">Opción 1</a></li>
-        <li><a href="#opcion2">Opción 2</a></li>
-        <li><a href="#opcion3">Opción 3</a></li>
+    .oscuro {
+      background-color: #f6f2f2;
+      color: #ffffff;
+    }
+
+    .oscuro a {
+      color: #bb86fc;
+    }
+  </style>
+  <header class="encabezado">
+    <h1>Bienvenido a la Aplicación de Ventas</h1>
+    <nav>
+      <ul class="menu">
+        <li><a href="Inicio.html">Inicio</a></li>
+        <li><a href="Productos.html">Productos</a></li>
+        <li><a href="Contacto.html">Contacto</a></li>
       </ul>
-      </nav>
-    </header>
-  
+    </nav>
+  </header>
 
-    <main class="productos">
-        <!-- Productos del 1 al 30 -->
-        <!-- Puedes reemplazar imágenes y textos según tus necesidades -->
+  <main>
+    <section class="hero">
+      <div class="hero-texto">
+        <h2>¡Descubre lo mejor en tecnología!</h2>
+        <p>Los productos más innovadores, al alcance de tu mano.</p>
+        <a href="Productos.html" class="boton-cta">Ver productos</a>
+      </div>
+      <img src="img/usar.png" alt="Tecnología" class="hero-img">
+    </section>
 
-        <!-- INICIO -->
-        <div class="producto">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_944485-MLU73128535334_122023-O.webp" alt="Producto 1">
-            <h3>Producto 1</h3>
-            <button onclick="consultarPorWhatsApp('Producto 1')">Consultar</button>
-            <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button>
-        </div>
-        <div class="producto">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_987690-MLA81820900818_012025-O.webp" alt="Producto 2">
-            <h3>Producto 2</h3>
-            <button onclick="consultarPorWhatsApp('Producto 2')">Consultar</button>
-            <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-        </div>
-        <div class="producto">
-            <img src="https://http2.mlstatic.com/D_NQ_NP_891578-MLA69978888366_062023-O.webp" alt="Producto 3">
-            <h3>Producto 3</h3>
-            <button onclick="consultarPorWhatsApp('Producto 3')">Consultar</button>
-            <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-        </div>
-    <div class="producto">
-      <img src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCL/129828089_01/w=800,h=800,fit=pad" alt="Producto 4">
-      <h3>Producto 4</h3>
-      <button onclick="consultarPorWhatsApp('Producto 4')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-    </div>
-    <div class="producto">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7PXAgA_X7G4kp32KVULZ4M7jpX8wFxRXh9wdf7xmv3zj4orKhjrktWRc04kaQrWfJGAY&usqp=CAU" alt="Producto 5">
-      <h3>Producto 5</h3>
-      <button onclick="consultarPorWhatsApp('Producto 5')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button>
-    </div>
-    <div class="producto">
-      <img src="https://plazavea.vteximg.com.br/arquivos/ids/27608294-418-418/image-7070e2dca158412d8f34d642" alt="Producto 6">
-      <h3>Producto 6</h3>
-      <button onclick="consultarPorWhatsApp('Producto 6')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button>
-    </div>
-    <div class="producto">
-      <img src="https://ae01.alicdn.com/kf/S72fffe2748a843338b821ebf8aab2f45I.jpg" alt="Producto 7">
-      <h3>Producto 7</h3>
-      <button onclick="consultarPorWhatsApp('Producto 7')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button>
-    </div>
-    <div class="producto">
-      <img src="https://media.falabella.com/falabellaPE/130409008_1/w=800,h=800,fit=pad" alt="Producto 8">
-      <h3>Producto 8</h3>
-      <button onclick="consultarPorWhatsApp('Producto 8')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button>
-    </div>
-    <div class="producto">
-      <img src="https://promart.vteximg.com.br/arquivos/ids/6461712-1000-1000/image-5ccb1783a58d4709a7dc08d506eaad30.jpg?v=637969817191130000" alt="Producto 9">
-      <h3>Producto 9</h3>
-      <button onclick="consultarPorWhatsApp('Producto 9')">Consultar</button>
-            <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button>
-    </div>
-    <div class="producto">
-      <img src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaPE/122578327_01/public" alt="Producto 10">
-      <h3>Producto 10</h3>
-      <button onclick="consultarPorWhatsApp('Producto 10')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button>
-    </div>
-    <div class="producto">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTsxLgLXyftTmRiWzQX3TJSfvvkODkRjoJlYG1PzpzKGPssxvhjqjAzrL5HD-0iXZnH5f8&usqp=CAU" alt="Producto 10">
-        <h3>Producto 11</h3>
-        <button onclick="consultarPorWhatsApp('Producto 11')">Consultar</button>
-        <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button>
+    <section class="sobre-nosotros">
+      <h2>Sobre Nosotros</h2>
+      <div class="contenido-sobre-nosotros">
+        <p>Somos una empresa apasionada por la tecnología y el servicio al cliente. Nuestra misión es ofrecer productos de calidad y atención personalizada.</p>
+        <p>Con más de 10 años de experiencia en el mercado, nos hemos consolidado como líderes en la venta de dispositivos electrónicos y accesorios. Trabajamos con las marcas más reconocidas para garantizar la satisfacción de nuestros clientes.</p>
+        <p>Visítanos y descubre por qué somos la mejor opción para tus necesidades tecnológicas.</p>
       </div>
-      <div class="producto">
-        <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSzy2iEVE2kxH00qEYchWvwkp3GxkwSPNaUAC5QNR2jCR_gIn3b" alt="Producto 10">
-        <h3>Producto 12</h3>
-        <button onclick="consultarPorWhatsApp('Producto 12')">Consultar</button>
-        <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button>
-      </div>
-      <div class="producto">
-        <img src="https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/4631/PMP20000278257/imagen2-1.jpeg" alt="Producto 10">
-        <h3>Producto 13</h3>
-        <button onclick="consultarPorWhatsApp('Producto 13')">Consultar</button>
-            <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button>
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
-        <h3>Producto 14</h3>
-        <button onclick="consultarPorWhatsApp('Producto 14')">Consultar</button>
-        <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
-        <h3>Producto 15</h3>
-        <button onclick="consultarPorWhatsApp('Producto 15')">Consultar</button>
-            <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
-        <h3>Producto 16</h3>
-        <button onclick="consultarPorWhatsApp('Producto 16')">Consultar</button>
-        <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
-        <h3>Producto 17</h3>
-        <button onclick="consultarPorWhatsApp('Producto 17')">Consultar</button>
-            <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
-        <h3>Producto 18</h3>
-        <button onclick="consultarPorWhatsApp('Producto 18')">Consultar</button>
-        <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x200.png?text=Producto+10" alt="Producto 10">
-        <h3>Producto 19</h3>
-        <button onclick="consultarPorWhatsApp('Producto 19')">Consultar</button>
-        <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-      </div>
-      <div class="producto">
-        <img src="https://via.placeholder.com/300x200.png?text=Producto+21" alt="Producto 21">
-        <h3>Producto 20</h3>
-        <button onclick="consultarPorWhatsApp('Producto 20')">Consultar</button>
-        <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-      </div> 
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200.png?text=Producto+21" alt="Producto 21">
-      <h3>Producto 21</h3>
-      <button onclick="consultarPorWhatsApp('Producto 21')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200.png?text=Producto+22" alt="Producto 22">
-      <h3>Producto 22</h3>
-      <button onclick="consultarPorWhatsApp('Producto 22')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200.png?text=Producto+23" alt="Producto 23">
-      <h3>Producto 23</h3>
-      <button onclick="consultarPorWhatsApp('Producto 23')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200.png?text=Producto+24" alt="Producto 24">
-      <h3>Producto 24</h3>
-      <button onclick="consultarPorWhatsApp('Producto 24')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200.png?text=Producto+25" alt="Producto 25">
-      <h3>Producto 25</h3>
-      <p>Descripción del producto 25.</p>
-      <button onclick="consultarPorWhatsApp('Producto 25')">Consultar</button>
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200.png?text=Producto+26" alt="Producto 26">
-      <h3>Producto 26</h3>
-      <button onclick="consultarPorWhatsApp('Producto 26')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200.png?text=Producto+27" alt="Producto 27">
-      <h3>Producto 27</h3>
-      <button onclick="consultarPorWhatsApp('Producto 27')">Consultar</button>
-            <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200.png?text=Producto+28" alt="Producto 28">
-      <h3>Producto 28</h3>
-      <button onclick="consultarPorWhatsApp('Producto 28')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-    </div>
-    <div class="producto">
-      <img src="https://via.placeholder.com/300x200.png?text=Producto+29" alt="Producto 29">
-      <h3>Producto 29</h3>
-      <button onclick="consultarPorWhatsApp('Producto 29')">Consultar</button>
-      <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-    </div>
-    <div class="producto">
-        <img src="https://via.placeholder.com/300x200.png?text=Producto+29" alt="Producto 29">
-        <h3>Producto 30</h3>
-        <button onclick="consultarPorWhatsApp('Producto 30')">Consultar</button>
-        <button onclick="unirseAGrupo()">Unirse al Grupo para las consultas</button> 
-      </div>
+    </section>
 
-     
-       
-    </main>
-  <script src="app.js"></script>
+    <section class="ofertas">
+      <h2>Ofertas Especiales</h2>
+      <p>¡No te pierdas nuestras promociones exclusivas por tiempo limitado!</p>
+    <a href="Ofertas.html" title="Ver ofertas especiales">Ver ofertas especiales</a>
+    </section>
+  </main>
+</main>
+
+<aside class="sidebar">
+  <h2>Últimas Noticias</h2>
+  <ul>
+    <li><a href="#">Lanzamiento de nuevo producto</a></li>
+    <li><a href="#">Promociones de fin de año</a></li>
+    <li><a href="#">Consejos de compra</a></li>
+  </ul>
+
+  <section class="productos-destacados">
+    <h2>Productos Destacados</h2>
+    <ul class="lista-productos">
+      <li>
+        <img src="https://m.media-amazon.com/images/I/71WtflQQVyL._AC_SL1500_.jpg" alt="Producto 1">
+        <h3>Producto 1</h3>
+        <p>Descripción breve del producto 1.</p>
+        <a href="Productos.html" class="boton-detalle">Ver más</a>
+      </li>
+      <li>
+        <img src="https://intouchperu.com/wp-content/uploads/2022/08/WhatsApp-Image-2022-08-04-at-9.11.28-PM-4.jpeg" alt="Producto 2">
+        <h3>Producto 2</h3>
+        <p>Descripción breve del producto 2.</p>
+        <a href="Productos.html" class="boton-detalle">Ver más</a>
+      </li>
+      <li>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR47JFWVl1xl0E6tmWpxP4alve3i41At4dDnQ&s" alt="Producto 3">
+        <h3>Producto 3</h3>
+        <p>Descripción breve del producto 3.</p>
+        <a href="Productos.html" class="boton-detalle">Ver más</a>
+      </li>
+    </ul>
+  </section>
+</aside>
+
+<!-- ✅ Footer corregido, ya no dentro del aside -->
+<footer class="pie">
+  <p>&copy; 2025 Aplicación de Ventas. Todos los derechos reservados.</p>
+  <div class="redes-sociales">
+    <a href="https://facebook.com" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com" target="_blank" rel="noopener" title="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i> Instagram</a>
+  </div>
+</footer>
+</body>
+
 </body>
 </html>
-
-

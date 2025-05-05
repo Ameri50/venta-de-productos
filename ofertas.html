@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ofertas</title>
+    <link rel="stylesheet" href="ofertas.css">
+</head>
+<body>
+    <header>
+        <div class="modo-oscuro">
+            <button id="boton-modo-oscuro">Modo Oscuro</button>
+        </div>
+        <script>
+            const botonModoOscuro = document.getElementById('boton-modo-oscuro');
+            botonModoOscuro.addEventListener('click', () => {
+                document.body.classList.toggle('modo-oscuro');
+            });
+        </script>
+        <style>
+            .modo-oscuro {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+            }
+
+            body.modo-oscuro {
+                background-color: #121212;
+                color: #ffffff;
+            }
+
+            body.modo-oscuro a {
+                color: #bb86fc;
+            }
+        </style>
+        <div class="logo">
+            <img src="img/usar.png" alt="Logo de la tienda" class="logo-img" />
+        </div>
+        <h1 class="catalogo-titulo">Catálogo de Productos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Promociones del Mes</h2>
+            <article>
+                <h3>Producto 1</h3>
+                <p>Descripción de la oferta del producto 1.</p>
+                <p><strong>Precio: $10.00</strong></p>
+            </article>
+            <article>
+                <h3>Producto 2</h3>
+                <p>Descripción de la oferta del producto 2.</p>
+                <p><strong>Precio: $20.00</strong></p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Ofertas Exclusivas</h2>
+            <article>
+                <h3>Producto 3</h3>
+                <p>Descripción de la oferta del producto 3.</p>
+                <p><strong>Precio: $30.00</strong></p>
+            </article>
+            <article>
+                <h3>Producto 4</h3>
+                <p>Descripción de la oferta del producto 4.</p>
+                <p><strong>Precio: $40.00</strong></p>
+            </article>
+            <section class="carrusel-productos">
+                <h2>Ofertas en Deslizamiento</h2>
+                <div class="slider">
+                  <div class="slide-track">
+                    <div class="slide"><a href="producto1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7KZxS1fn4btedP8kJvW44CEEVsOoy7b8FGQ&s" alt="Producto 1"></a></div>
+                    <div class="slide"><a href="producto2.html"><img src="https://http2.mlstatic.com/D_NQ_NP_676656-MLU74429366100_022024-O.webp" alt="Producto 2"></a></div>
+                    <div class="slide"><a href="producto3.html"><img src="https://rimage.ripley.com.pe/home.ripley/Attachment/MKP/119/PMP00001578735/full_image-1.jpeg" alt="Producto 3"></a></div>
+                    <div class="slide"><a href="producto4.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsvjTiWgjguN-dbRF51mGgaXQDrptdn3uwRA&s" alt="Producto 4"></a></div>
+                    <!-- Repite para crear el efecto de bucle -->
+                    <div class="slide"><a href="producto1.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSg-7gWf3-0Yqxe_NpF0QgWTFtATbIW1shGZQ&s" alt="Producto 1"></a></div>
+                    <div class="slide"><a href="producto2.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVyXWO8dy-hOPL7KaGt3c1oBDbvdxEcKHn-Q&s" alt="Producto 2"></a></div>
+                    <div class="slide"><a href="producto3.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1Q4RHEctWz1KSPTfIpHYZfx_rZuNyOi5WIw&s" alt="Producto 3"></a></div>
+                    <div class="slide"><a href="producto4.html"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGghjINJuMP9gsJXgHuyO7g15vW9S0Hur9Jw&s" alt="Producto 4"></a></div>
+                  </div>
+                </div>
+              </section>
+              <div class="color-selector">
+                <label for="tema">Cambiar color:</label>
+                <select id="tema">
+                  <option value="default">Predeterminado</option>
+                  <option value="rojo">Rojo</option>
+                  <option value="verde">Verde</option>
+                  <option value="azul">Azul</option>
+                </select>
+              </div>
+               
+    </main>
+    <footer>
+        <p>&copy; 2023 Aplicación de Ventas</p>
+    </footer>
+</body>
+<script>
+    const tema = document.getElementById('tema');
+    tema.addEventListener('change', () => {
+      const root = document.documentElement;
+      switch (tema.value) {
+        case 'rojo':
+          root.style.setProperty('--color-titulo', '#d72638');
+          root.style.setProperty('--color-subtitulo', '#ff7f50');
+          root.style.setProperty('--color-enlace', '#d72638');
+          break;
+        case 'verde':
+          root.style.setProperty('--color-titulo', '#28a745');
+          root.style.setProperty('--color-subtitulo', '#20c997');
+          root.style.setProperty('--color-enlace', '#28a745');
+          break;
+        case 'azul':
+          root.style.setProperty('--color-titulo', '#0a84ff');
+          root.style.setProperty('--color-subtitulo', '#17a2b8');
+          root.style.setProperty('--color-enlace', '#0a84ff');
+          break;
+        default:
+          root.style.setProperty('--color-titulo', '#0a84ff');
+          root.style.setProperty('--color-subtitulo', '#20c997');
+          root.style.setProperty('--color-enlace', '#ff6f61');
+          break;
+      }
+    });
+  </script>
+  
+</html>

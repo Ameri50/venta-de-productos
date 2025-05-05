@@ -1,3 +1,18 @@
+/* Variables */
+:root {
+  --color-fondo: #020101;
+  --color-texto: #f8f2f2;
+  --color-primario: #007bff;
+  --color-primario-hover: #0056b3;
+  --color-secundario: #1a1a1a;
+  --color-blanco: #ffffff;
+  --color-negro: #000000;
+  --sombra: 0 2px 5px rgba(255, 239, 239, 0.5);
+  --sombra-inset: inset 0 0 8px rgba(0, 0, 0, 0.5);
+  --borde-radius: 12px;
+  --padding-global: 1rem;
+}
+
 /* Global Styles */
 * {
   box-sizing: border-box;
@@ -7,9 +22,12 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #020101;
-  color: #f8f2f2;
-  padding: 1rem;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  padding: var(--padding-global);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header */
@@ -17,11 +35,11 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: var(--padding-global);
   background-color: #0b0808;
-  box-shadow: 0 2px 5px rgb(255, 239, 239);
-  border-radius: 12px;
-  margin-bottom: 2rem;
+  box-shadow: var(--sombra);
+  border-radius: var(--borde-radius);
+  margin-bottom: var(--padding-global);
 }
 
 header .logo img {
@@ -33,56 +51,90 @@ header .logo img {
   list-style: none;
   display: flex;
   gap: 1rem;
-  padding: 0;
 }
 
 .menu-opciones a {
   text-decoration: none;
-  color: #f9f7f7;
+  color: var(--color-texto);
   font-weight: 600;
   transition: color 0.2s;
 }
 
 .menu-opciones a:hover {
-  color: #007bff;
+  color: var(--color-primario);
 }
 
 #modo-oscuro {
   padding: 0.5rem 1rem;
   border-radius: 8px;
   border: none;
-  background-color: #007bff;
-  color: white;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 #modo-oscuro:hover {
-  background-color: #0056b3;
+  background-color: var(--color-primario-hover);
+}
+
+/* Contenedor principal */
+.contenedor {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Barra lateral */
+.barra-opciones {
+  width: 220px;
+  background-color: var(--color-secundario);
+  color: var(--color-blanco);
+  padding: var(--padding-global);
+  border-radius: var(--borde-radius);
+  margin-right: var(--padding-global);
+  box-shadow: var(--sombra);
+}
+
+.barra-opciones ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.barra-opciones li {
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 /* Productos */
 .productos {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
+  grid-template-rows: repeat(11, auto);
+  grid-auto-flow: column;
+  overflow-x: auto;
+  gap: 1rem;
+  padding: var(--padding-global);
+  flex: 1;
+  background-color: #0e0e0e;
+  border-radius: var(--borde-radius);
+  box-shadow: var(--sombra-inset);
 }
 
 .producto {
-  background-color: #ffffff;
-  color: #000000;
-  border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 2px 6px rgba(245, 242, 242, 0.1);
+  background-color: var(--color-blanco);
+  border: 1px solid #ddd;
+  padding: 0.5rem;
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--color-negro);
+  min-width: 160px;
 }
 
 .producto img {
   max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .producto h3 {
@@ -95,7 +147,7 @@ header .logo img {
   border: none;
   border-radius: 6px;
   background-color: #040805;
-  color: white;
+  color: var(--color-blanco);
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
@@ -104,14 +156,12 @@ header .logo img {
 .producto button:hover {
   background-color: #218838;
 }
+
+/* Sección Nosotros */
 .nosotros {
   width: 100%;
-  background-color: #ffffff;
+  background-color: var(--color-blanco);
   padding: 3rem 5%;
-  margin: 0;
-  border-radius: 0;
-  box-shadow: none;
-  min-height: 600px; /* ← Esto lo hace más largo */
+  min-height: 600px;
+  color: var(--color-negro);
 }
-
-

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categorías de Productos</title>
+    <link rel="stylesheet" href="categoria.css">
+</head>
+<body> 
+    <header>
+        <h1>Gestión de Categorías</h1>
+    </header>
+
+    <main>
+        <!-- Buscar Categoría -->
+        <section>
+            <h2>Buscar Categoría</h2>
+            <form id="search-form">
+                <label for="search-category">Buscar Categoría:</label>
+                <input type="text" id="search-category" name="search-category" placeholder="Escribe el nombre de la categoría" required>
+                <button type="submit">Buscar</button>
+            </form>
+        </section>
+
+        <section>
+            <h2>Lista de Categorías</h2>
+            <ul id="category-list" class="category-grid">
+                <li>
+                    <a href="productos.html?categoria=electronica">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8N-942sY2xhOFYMle0IbLhUcjyBraDoqQig&s" alt="Electrónica">
+                        <span>Electrónica</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="productos.html?categoria=ropa">
+                        <img src="https://wwflac.awsassets.panda.org/img/8886_1_736993.jpg" alt="Ropa">
+                        <span>Ropa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="productos.html?categoria=hogar">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTinHn82X6VoBe39sdZEwL14d0cLKJcEqFPzA&s" alt="Hogar">
+                        <span>Hogar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="productos.html?categoria=deportes">
+                        <img src="https://s.france24.com/media/display/6aca8d1a-7783-11ea-9cf2-005056bf87d6/w:1280/p:16x9/WEB%2005ABR%20DEPORTES%20PORTADA%20FOTO.jpg" alt="Deportes">
+                        <span>Deportes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="productos.html?categoria=apple">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO3UsUCzFrpbJei8sKirJoM0ZveMH2pRGqnA&s" alt="Apple">
+                        <span>Apple</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="productos.html?categoria=aseo">
+                        <img src="https://comerciante.lacuarta.com/wp-content/uploads/2022/02/Limpieza-y-aseo-00-ok.jpg" alt="Aseo">
+                        <span>Aseo</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="productos.html?categoria=salud">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY9m91u7-5V86n46tFbRtRLHsWBWIetMyGuQ&s" alt="Salud">
+                        <span>Salud</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="productos.html?categoria=libros">
+                        <img src="https://impulsapopular.com/wp-content/uploads/2021/06/4967-5-libros-que-tu-equipo-de-trabajo-debe-leer.jpg" alt="Libros">
+                        <span>Libros</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="productos.html?categoria=moda">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMrvrsd6y7nOeBiFkoe0DsHCt3oNLUalBP8A&s" alt="Moda">
+                        <span>Moda</span>
+                    </a>
+                </li>
+            </ul>
+        </section>
+         
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Aplicación de Ventas</p>
+    </footer>
+
+    <script src="categoria.js"></script>
+</body>
+</html>

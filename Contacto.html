@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <button onclick="toggleDarkMode()">Modo Oscuro</button>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        body.modo-oscuro {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        body.modo-oscuro a {
+            color: #bb86fc;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, textarea {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #0d0806;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2d343c;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .modo-oscuro button {
+            background-color: #0c0b0e;
+        }
+        .modo-oscuro button:hover {
+            background-color: #3700b3;
+        }
+    </style>
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('modo-oscuro');
+        }
+
+        function sendToWhatsApp() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            const phoneNumber = '+51951012633'; // Replace with your phone number
+            const url = `https://wa.me/${phoneNumber}?text=Nombre:%20${encodeURIComponent(name)}%0ACorreo:%20${encodeURIComponent(email)}%0AMensaje:%20${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Contacto</h1>
+        <form action="#" method="post">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+
+            <label for="message">Mensaje:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tu mensaje" required></textarea>
+
+            <button type="button" onclick="sendToWhatsApp()">Enviar</button>
+        </form>
+        <button onclick="window.location.href='index.html'" class="button-inicio">Inicio</button>
+        <p>También puedes contactarnos a través de nuestras redes sociales:</p>
+        <ul>
+            <li><a href="https://www.facebook.com/tuempresa" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://www.instagram.com/tuempresa" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.twitter.com/tuempresa" target="_blank" rel="noopener">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/company/tuempresa" target="_blank" rel="noopener">LinkedIn</a></li>
+        </ul>
+        <p>¡Esperamos tu mensaje!</p>
+    </div>
+</body>
+</html>
